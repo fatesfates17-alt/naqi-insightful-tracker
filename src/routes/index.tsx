@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import shot1 from "@/assets/shot1.png.asset.json";
+import { Leaf } from "lucide-react";
 import shot2 from "@/assets/shot2.png.asset.json";
 import shot3 from "@/assets/shot3.png.asset.json";
 
@@ -51,7 +52,8 @@ function Index() {
   return (
     <main className="min-h-screen bg-background">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-7">
-        <span className="text-xl font-extrabold tracking-tight">
+        <span className="flex items-center gap-2 text-xl font-extrabold tracking-tight">
+          <Leaf className="h-5 w-5 text-primary" strokeWidth={2.5} aria-hidden="true" />
           Naqi<span className="text-primary"> AI</span>
         </span>
         <a
