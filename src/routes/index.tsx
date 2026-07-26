@@ -51,33 +51,32 @@ const features = [
 function Index() {
   const plans = [
     {
-      name: "Free",
-      price: "$0",
-      period: "forever",
-      blurb: "Everything you need to start eating clean.",
-      perks: ["10 scans per day", "Halal verification", "Daily calorie ring", "Basic macro tracking"],
+      name: "Monthly",
+      price: "$6.99",
+      period: "per month",
+      blurb: "Full access, billed every month. Cancel anytime.",
+      perks: [
+        "Unlimited barcode scans",
+        "Halal verification",
+        "Weekly insights & trends",
+        "Custom macro goals",
+        "Meal history & streaks",
+      ],
       featured: false,
     },
     {
-      name: "Pro",
-      price: "$4.99",
-      period: "per month",
-      blurb: "Unlimited scanning and the full insight engine.",
+      name: "Yearly",
+      price: "$39.99",
+      period: "per year",
+      blurb: "Same features, just $3.30 a month — save 52%.",
       perks: [
         "Unlimited barcode scans",
+        "Halal verification",
         "Weekly insights & trends",
         "Custom macro goals",
         "Meal history & streaks",
       ],
       featured: true,
-    },
-    {
-      name: "Lifetime",
-      price: "$59",
-      period: "one payment",
-      blurb: "Pay once, keep Naqi AI Pro forever.",
-      perks: ["All Pro features", "Every future update", "Priority support", "No subscription"],
-      featured: false,
     },
   ];
 
@@ -190,7 +189,7 @@ function Index() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-3xl gap-5 md:grid-cols-2">
           {plans.map((plan) => (
             <article
               key={plan.name}
@@ -202,7 +201,7 @@ function Index() {
             >
               {plan.featured && (
                 <span className="absolute right-6 top-6 rounded-full bg-accent px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-accent-foreground">
-                  Popular
+                  Best value
                 </span>
               )}
               <h3 className="text-lg font-bold">{plan.name}</h3>
@@ -247,7 +246,7 @@ function Index() {
                     : "mt-8 inline-flex w-full justify-center rounded-full border border-primary px-6 py-3.5 text-sm font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"
                 }
               >
-                {plan.name === "Free" ? "Download free" : `Get ${plan.name}`}
+                {`Get ${plan.name}`}
               </a>
             </article>
           ))}
