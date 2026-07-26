@@ -172,6 +172,83 @@ function Index() {
         </div>
       </section>
 
+      <section id="pricing" className="mx-auto max-w-6xl px-6 pb-24">
+        <div className="text-center">
+          <span className="inline-flex items-center rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            Pricing
+          </span>
+          <h2 className="mt-6 text-4xl font-black leading-tight sm:text-5xl">
+            Simple plans. <span className="text-primary">No surprises.</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-muted-foreground">
+            Start free, upgrade when you want unlimited scans and deeper insights.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          {plans.map((plan) => (
+            <article
+              key={plan.name}
+              className={
+                plan.featured
+                  ? "relative rounded-[2rem] bg-primary p-8 text-primary-foreground shadow-xl md:-mt-4 md:pb-12"
+                  : "surface-card flex flex-col p-8"
+              }
+            >
+              {plan.featured && (
+                <span className="absolute right-6 top-6 rounded-full bg-accent px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-accent-foreground">
+                  Popular
+                </span>
+              )}
+              <h3 className="text-lg font-bold">{plan.name}</h3>
+              <div className="mt-4 flex items-end gap-2">
+                <span className="text-4xl font-black tracking-tight">{plan.price}</span>
+                <span
+                  className={
+                    plan.featured
+                      ? "pb-1 text-sm text-primary-foreground/70"
+                      : "pb-1 text-sm text-muted-foreground"
+                  }
+                >
+                  {plan.period}
+                </span>
+              </div>
+              <p
+                className={
+                  plan.featured
+                    ? "mt-3 text-sm text-primary-foreground/80"
+                    : "mt-3 text-sm text-muted-foreground"
+                }
+              >
+                {plan.blurb}
+              </p>
+              <ul className="mt-6 space-y-3 text-sm">
+                {plan.perks.map((perk) => (
+                  <li key={perk} className="flex items-start gap-2.5">
+                    <Check
+                      className={plan.featured ? "mt-0.5 h-4 w-4 shrink-0 text-accent" : "mt-0.5 h-4 w-4 shrink-0 text-primary"}
+                      strokeWidth={3}
+                      aria-hidden="true"
+                    />
+                    <span className={plan.featured ? "text-primary-foreground/90" : ""}>{perk}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="#download"
+                className={
+                  plan.featured
+                    ? "mt-8 inline-flex w-full justify-center rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition hover:opacity-90"
+                    : "mt-8 inline-flex w-full justify-center rounded-full border border-primary px-6 py-3.5 text-sm font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"
+                }
+              >
+                {plan.name === "Free" ? "Download free" : `Get ${plan.name}`}
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section id="download" className="px-6 pb-24">
         <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-primary px-8 py-16 text-center text-primary-foreground">
           <h2 className="text-4xl font-black sm:text-5xl">Eat clean. Stay Naqi.</h2>
@@ -180,15 +257,34 @@ function Index() {
           </p>
           <a
             href="#"
-            className="mt-8 inline-flex rounded-full bg-accent px-8 py-4 text-base font-semibold text-accent-foreground transition hover:opacity-90"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-10 py-5 text-lg font-bold text-accent-foreground shadow-lg transition hover:-translate-y-0.5 hover:opacity-95"
           >
-            Download for iPhone
+            <Leaf className="h-5 w-5" strokeWidth={2.5} aria-hidden="true" />
+            Sign up & download free
           </a>
+          <p className="mt-4 text-sm text-primary-foreground/70">
+            Free to start · No card required
+          </p>
         </div>
       </section>
 
-      <footer className="border-t border-border px-6 py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Naqi AI
+      <footer className="border-t border-border px-6 py-8 text-sm text-muted-foreground">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
+          <span>© {new Date().getFullYear()} Naqi AI</span>
+          <nav className="flex items-center gap-6">
+            <a href="#pricing" className="transition hover:text-primary">
+              Pricing
+            </a>
+            <a
+              href="https://honeysuckle-marmot-129.notion.site/Naqi-Ai-Privacy-policy-3a51f3cc9c3c8062a6f9e6c951e86ef1?pvs=74"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-primary"
+            >
+              Privacy Policy
+            </a>
+          </nav>
+        </div>
       </footer>
     </main>
   );
