@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import shot1 from "@/assets/shot1.png.asset.json";
+import { Leaf } from "lucide-react";
 import shot2 from "@/assets/shot2.png.asset.json";
 import shot3 from "@/assets/shot3.png.asset.json";
 
