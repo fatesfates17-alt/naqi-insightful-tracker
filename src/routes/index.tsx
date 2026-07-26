@@ -185,7 +185,7 @@ function Index() {
             Simple plans. <span className="text-primary">No surprises.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-md text-muted-foreground">
-            Start free, upgrade when you want unlimited scans and deeper insights.
+            One plan, two ways to pay. Go yearly and it works out to just $3.30 a month.
           </p>
         </div>
 
