@@ -88,12 +88,17 @@ function Index() {
           <Leaf className="h-5 w-5 text-primary" strokeWidth={2.5} aria-hidden="true" />
           Naqi<span className="text-primary"> AI</span>
         </span>
-        <a
-          href="#download"
-          className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
-        >
-          Get the app
-        </a>
+        <div className="flex items-center gap-6">
+          <a href="#pricing" className="hidden text-sm font-semibold text-muted-foreground transition hover:text-primary sm:inline">
+            Pricing
+          </a>
+          <a
+            href="#download"
+            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
+          >
+            Get the app
+          </a>
+        </div>
       </header>
 
       <section
