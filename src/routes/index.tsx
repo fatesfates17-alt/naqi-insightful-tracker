@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import shot1 from "@/assets/shot1.png.asset.json";
-import { Leaf } from "lucide-react";
+import { Check, Leaf } from "lucide-react";
 import shot2 from "@/assets/shot2.png.asset.json";
 import shot3 from "@/assets/shot3.png.asset.json";
 
@@ -49,6 +49,38 @@ const features = [
 ];
 
 function Index() {
+  const plans = [
+    {
+      name: "Free",
+      price: "$0",
+      period: "forever",
+      blurb: "Everything you need to start eating clean.",
+      perks: ["10 scans per day", "Halal verification", "Daily calorie ring", "Basic macro tracking"],
+      featured: false,
+    },
+    {
+      name: "Pro",
+      price: "$4.99",
+      period: "per month",
+      blurb: "Unlimited scanning and the full insight engine.",
+      perks: [
+        "Unlimited barcode scans",
+        "Weekly insights & trends",
+        "Custom macro goals",
+        "Meal history & streaks",
+      ],
+      featured: true,
+    },
+    {
+      name: "Lifetime",
+      price: "$59",
+      period: "one payment",
+      blurb: "Pay once, keep Naqi AI Pro forever.",
+      perks: ["All Pro features", "Every future update", "Priority support", "No subscription"],
+      featured: false,
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-background">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-7">
