@@ -92,7 +92,9 @@ function Index() {
             Pricing
           </a>
           <a
-            href="#download"
+            href="https://apps.apple.com/us/app/naqi-ai/id6791649745"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
           >
             Get the app
