@@ -92,7 +92,9 @@ function Index() {
             Pricing
           </a>
           <a
-            href="#download"
+            href="https://apps.apple.com/us/app/naqi-ai/id6791649745"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
           >
             Get the app
@@ -118,7 +120,9 @@ function Index() {
             goes in the trolley.
           </p>
           <a
-            href="#download"
+            href="https://apps.apple.com/us/app/naqi-ai/id6791649745"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition hover:bg-primary-glow"
           >
             Download Naqi AI
@@ -239,7 +243,9 @@ function Index() {
                 ))}
               </ul>
               <a
-                href="#download"
+                href="https://apps.apple.com/us/app/naqi-ai/id6791649745"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={
                   plan.featured
                     ? "mt-8 inline-flex w-full justify-center rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground transition hover:opacity-90"
@@ -260,7 +266,9 @@ function Index() {
             Halal verification and calorie tracking in one scan.
           </p>
           <a
-            href="#"
+            href="https://apps.apple.com/us/app/naqi-ai/id6791649745"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-10 py-5 text-lg font-bold text-accent-foreground shadow-lg transition hover:-translate-y-0.5 hover:opacity-95"
           >
             <Leaf className="h-5 w-5" strokeWidth={2.5} aria-hidden="true" />
