@@ -49,37 +49,6 @@ const features = [
 ];
 
 function Index() {
-  const plans = [
-    {
-      name: "Monthly",
-      price: "$6.99",
-      period: "per month",
-      blurb: "Full access, billed every month. Cancel anytime.",
-      perks: [
-        "Unlimited barcode scans",
-        "Halal verification",
-        "Weekly insights & trends",
-        "Custom macro goals",
-        "Meal history & streaks",
-      ],
-      featured: false,
-    },
-    {
-      name: "Yearly",
-      price: "$39.99",
-      period: "per year",
-      blurb: "Same features, just $3.30 a month — save 52%.",
-      perks: [
-        "Unlimited barcode scans",
-        "Halal verification",
-        "Weekly insights & trends",
-        "Custom macro goals",
-        "Meal history & streaks",
-      ],
-      featured: true,
-    },
-  ];
-
   return (
     <main className="min-h-screen bg-background">
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-7">
