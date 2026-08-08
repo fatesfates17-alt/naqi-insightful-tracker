@@ -83,11 +83,15 @@ function Index() {
             Naqi AI reads the barcode, confirms it's halal, and logs the calories — before the box
             goes in the trolley.
           </p>
+          <p className="mt-6 text-center text-xs text-muted-foreground">
+            Having trouble? Tap the ••• menu (top right) and select "Open in Browser", then tap the
+            button again.
+          </p>
           <a
             href="https://apps.apple.com/us/app/naqi-ai-halal-food-scanner/id6791649745"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition hover:bg-primary-glow"
+            className="mt-4 inline-flex rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition hover:bg-primary-glow"
           >
             Download Naqi AI
           </a>
