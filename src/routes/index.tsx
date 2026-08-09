@@ -83,7 +83,7 @@ function Index() {
             Naqi AI reads the barcode, confirms it's halal, and logs the calories — before the box
             goes in the trolley.
           </p>
-          <p className="mt-6 text-center text-xs text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-md text-center text-sm leading-relaxed text-muted-foreground">
             Having trouble? Tap the ••• menu (top right) and select "Open in Browser", then tap the
             button again.
           </p>
