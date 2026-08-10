@@ -1,12 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
-import shot1 from "@/assets/shot1.png.asset.json";
-import { Leaf } from "lucide-react";
-import shot2 from "@/assets/shot2.png.asset.json";
-import shot3 from "@/assets/shot3.png.asset.json";
+import { Apple } from "lucide-react";
+import appIcon from "@/assets/app-icon.png";
+import step1Menu from "@/assets/step1-menu.png";
+import step2OpenBrowser from "@/assets/step2-open-browser.png";
+import step3Button from "@/assets/step3-button.png";
 
-const title = "Naqi AI — Halal Calorie Tracking, Scanned in Seconds";
+const title = "Naqi AI — Open in the App Store";
 const description =
-  "Naqi AI scans any product barcode to verify halal status and track calories, protein, carbs and fats. Pure nutrition tracking built for Muslims.";
+  "Naqi AI is the halal food scanner and nutrition tracker. Open it directly in the App Store.";
+
+const appStoreUrl =
+  "https://apps.apple.com/us/app/naqi-ai-halal-food-scanner/id6791649745";
+const privacyUrl =
+  "https://honeysuckle-marmot-129.notion.site/Naqi-Ai-Privacy-policy-3a51f3cc9c3c8062a6f9e6c951e86ef1?pvs=74";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,154 +28,113 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-function Phone({ src, alt }: { src: string; alt: string }) {
-  return (
-    <div className="phone-frame w-[260px] shrink-0 sm:w-[290px]">
-      <div className="absolute left-1/2 top-3 z-10 h-6 w-24 -translate-x-1/2 rounded-full bg-ink" />
-      <div className="overflow-hidden rounded-[2.4rem] bg-background">
-        <img src={src} alt={alt} loading="lazy" className="block w-full" />
-      </div>
-    </div>
-  );
-}
-
-const features = [
+const steps = [
   {
-    title: "Halal verified",
-    body: "Every ingredient list is checked against our halal database. Doubtful additives get flagged before you buy.",
+    number: "1",
+    title: "Tap the ••• menu",
+    body: "Look for the three dots in the top-right corner of your browser and tap them.",
+    image: step1Menu,
+    alt: "Screenshot highlighting the three-dot menu in the top-right corner of a mobile browser",
   },
   {
-    title: "Barcode to macros",
-    body: "Point the camera, hold steady. Calories, protein, carbs and fats land in your day automatically.",
+    number: "2",
+    title: "Tap “Open in Browser”",
+    body: "Choose “Open in Safari” or “Open in Browser” from the menu that appears.",
+    image: step2OpenBrowser,
+    alt: "Screenshot highlighting the Open in Browser option in the mobile menu",
   },
   {
-    title: "Weekly insights",
-    body: "See totals, streaks and nutrient trends so you know exactly how the week actually went.",
+    number: "3",
+    title: "Tap the App Store button",
+    body: "Once the page opens in your browser, tap Open Naqi in the App Store again.",
+    image: step3Button,
+    alt: "Screenshot showing the Naqi AI landing page with the App Store button highlighted",
   },
 ];
 
 function Index() {
   return (
     <main className="min-h-screen bg-background">
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-7">
-        <span className="flex items-center gap-2 text-xl font-extrabold tracking-tight">
-          <Leaf className="h-5 w-5 text-primary" strokeWidth={2.5} aria-hidden="true" />
-          Naqi<span className="text-primary"> AI</span>
-        </span>
+      <section className="mx-auto flex max-w-md flex-col items-center px-6 pt-12 pb-10 text-center">
+        <div className="app-icon-shadow relative h-28 w-28 overflow-hidden rounded-[1.8rem]">
+          <img
+            src={appIcon}
+            alt="Naqi AI app icon"
+            width={112}
+            height={112}
+            className="h-full w-full object-cover"
+          />
+        </div>
+
+        <h1 className="mt-6 text-4xl font-black tracking-tight text-foreground sm:text-5xl">
+          Naqi AI
+        </h1>
+        <p className="mt-2 text-lg font-medium text-muted-foreground">
+          Halal Food Scanner & Nutrition Tracker
+        </p>
+
         <a
-          href="https://apps.apple.com/us/app/naqi-ai-halal-food-scanner/id6791649745"
+          href={appStoreUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
+          className="mt-8 inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-2xl bg-primary px-6 py-4 text-lg font-bold text-primary-foreground shadow-lg shadow-primary/20 transition hover:bg-primary-glow"
         >
-          Get the app
+          <Apple className="h-6 w-6" aria-hidden="true" />
+          Open Naqi in the App Store
         </a>
-      </header>
+      </section>
 
-      <section
-        className="px-6 pb-20 pt-10 text-center"
-        style={{ backgroundImage: "var(--gradient-hero)" }}
-      >
-        <div className="mx-auto max-w-3xl">
-          <span className="inline-flex items-center rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-            Halal nutrition, verified
-          </span>
-          <h1 className="mt-6 text-5xl font-black leading-[1.02] sm:text-7xl">
-            Scan any product
-            <br />
-            <span className="text-primary">instantly.</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-            Naqi AI reads the barcode, confirms it's halal, and logs the calories — before the box
-            goes in the trolley.
+      <section className="mx-auto max-w-md px-6 pb-16">
+        <div className="surface-card p-6">
+          <div className="flex items-center gap-3">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+              ?
+            </span>
+            <h2 className="text-lg font-bold text-foreground">Button not working?</h2>
+          </div>
+          <p className="mt-2 text-sm text-muted-foreground">
+            TikTok and some in-app browsers block App Store redirects. Follow these 3 steps:
           </p>
-          <p className="mx-auto mt-6 max-w-md text-center text-sm leading-relaxed text-muted-foreground">
-            Having trouble? Tap the ••• menu (top right) and select "Open in Browser", then tap the
-            button again.
-          </p>
-          <a
-            href="https://apps.apple.com/us/app/naqi-ai-halal-food-scanner/id6791649745"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition hover:bg-primary-glow"
-          >
-            Download Naqi AI
-          </a>
-        </div>
-        <div className="mt-14 flex justify-center">
-          <Phone src={shot1.url} alt="Naqi AI scanning a cereal barcode and showing halal verified macros" />
-        </div>
-      </section>
 
-      <section className="mx-auto grid max-w-6xl gap-5 px-6 pb-24 md:grid-cols-3">
-        {features.map((f) => (
-          <article key={f.title} className="surface-card p-7">
-            <h3 className="text-xl font-bold">{f.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{f.body}</p>
-          </article>
-        ))}
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <div>
-            <h2 className="text-4xl font-black leading-tight sm:text-5xl">
-              Track calories
-              <br />
-              <span className="text-primary">with ease.</span>
-            </h2>
-            <p className="mt-5 max-w-md text-muted-foreground">
-              A single ring shows how much of your daily goal is left. Protein, carbs and fats stack
-              up underneath, updated with every scan and every meal you log.
-            </p>
-          </div>
-          <div className="flex justify-center md:justify-end">
-            <Phone src={shot2.url} alt="Naqi AI daily tracking screen with calorie ring and macro bars" />
+          <div className="mt-6 space-y-5">
+            {steps.map((step) => (
+              <article key={step.number} className="rounded-2xl border border-border bg-card p-4">
+                <div className="flex items-start gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-base font-black text-primary-foreground">
+                    {step.number}
+                  </span>
+                  <div className="text-left">
+                    <h3 className="text-base font-bold text-foreground">{step.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+                  </div>
+                </div>
+                <div className="mt-4 overflow-hidden rounded-xl border border-border">
+                  <img
+                    src={step.image}
+                    alt={step.alt}
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="block w-full"
+                  />
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <div className="order-2 flex justify-center md:order-1 md:justify-start">
-            <Phone src={shot3.url} alt="Naqi AI weekly analytics with calorie chart and nutrient breakdown" />
-          </div>
-          <div className="order-1 md:order-2">
-            <h2 className="text-4xl font-black leading-tight sm:text-5xl">
-              See insights.
-              <br />
-              <span className="text-primary">Stay on track.</span>
-            </h2>
-            <p className="mt-5 max-w-md text-muted-foreground">
-              Weekly totals, day-by-day charts and nutrient trends. Naqi AI tells you where the week
-              went right and where it drifted.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <footer className="border-t border-border px-6 py-8 text-sm text-muted-foreground">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <span>© {new Date().getFullYear()} Naqi AI</span>
-          <nav className="flex items-center gap-6">
-            <a
-              href="https://apps.apple.com/us/app/naqi-ai-halal-food-scanner/id6791649745"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-primary"
-            >
-              Get the app
-            </a>
-            <a
-              href="https://honeysuckle-marmot-129.notion.site/Naqi-Ai-Privacy-policy-3a51f3cc9c3c8062a6f9e6c951e86ef1?pvs=74"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-primary"
-            >
-              Privacy Policy
-            </a>
-          </nav>
-        </div>
+      <footer className="border-t border-border px-6 py-6 text-center text-sm text-muted-foreground">
+        <a
+          href={privacyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-primary"
+        >
+          Privacy Policy
+        </a>
+        <span className="mx-2">·</span>
+        <span>© {new Date().getFullYear()} Naqi AI</span>
       </footer>
     </main>
   );

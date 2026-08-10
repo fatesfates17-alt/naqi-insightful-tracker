@@ -179,3 +179,9 @@
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-soft);
 }
+
+@utility app-icon-shadow {
+  box-shadow:
+    0 24px 48px -12px color-mix(in oklab, var(--ink) 20%, transparent),
+    0 0 0 1px color-mix(in oklab, var(--border) 50%, transparent);
+}
