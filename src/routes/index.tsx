@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Apple } from "lucide-react";
-import appIcon from "@/assets/app-icon.png";
-import step1Menu from "@/assets/step1-menu.png";
-import step2OpenBrowser from "@/assets/step2-open-browser.png";
-import step3Button from "@/assets/step3-button.png";
+import appIconAsset from "@/assets/app-icon.png.asset.json";
+import step1MenuAsset from "@/assets/step1-menu.png.asset.json";
+import step2OpenBrowserAsset from "@/assets/step2-open-browser.png.asset.json";
+import step3ButtonAsset from "@/assets/step3-button.png.asset.json";
 
 const title = "Naqi AI — Open in the App Store";
 const description =
