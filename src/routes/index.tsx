@@ -58,7 +58,7 @@ function Index() {
       <section className="mx-auto flex max-w-md flex-col items-center px-6 pt-12 pb-10 text-center">
         <div className="app-icon-shadow relative h-28 w-28 overflow-hidden rounded-[1.8rem]">
           <img
-            src={appIcon}
+            src={appIconAsset.url}
             alt="Naqi AI app icon"
             width={112}
             height={112}
