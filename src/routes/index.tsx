@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Apple } from "lucide-react";
-import appIcon from "@/assets/app-icon.png";
-import step1Menu from "@/assets/step1-menu.png";
-import step2OpenBrowser from "@/assets/step2-open-browser.png";
-import step3Button from "@/assets/step3-button.png";
+import appIconAsset from "@/assets/app-icon.png.asset.json";
+import step1MenuAsset from "@/assets/step1-menu.png.asset.json";
+import step2OpenBrowserAsset from "@/assets/step2-open-browser.png.asset.json";
+import step3ButtonAsset from "@/assets/step3-button.png.asset.json";
 
 const title = "Naqi AI — Open in the App Store";
 const description =
@@ -33,21 +33,21 @@ const steps = [
     number: "1",
     title: "Tap the ••• menu",
     body: "Look for the three dots in the top-right corner of your browser and tap them.",
-    image: step1Menu,
+    image: step1MenuAsset.url,
     alt: "Screenshot highlighting the three-dot menu in the top-right corner of a mobile browser",
   },
   {
     number: "2",
     title: "Tap “Open in Browser”",
     body: "Choose “Open in Safari” or “Open in Browser” from the menu that appears.",
-    image: step2OpenBrowser,
+    image: step2OpenBrowserAsset.url,
     alt: "Screenshot highlighting the Open in Browser option in the mobile menu",
   },
   {
     number: "3",
     title: "Tap the App Store button",
     body: "Once the page opens in your browser, tap Open Naqi in the App Store again.",
-    image: step3Button,
+    image: step3ButtonAsset.url,
     alt: "Screenshot showing the Naqi AI landing page with the App Store button highlighted",
   },
 ];
@@ -58,7 +58,7 @@ function Index() {
       <section className="mx-auto flex max-w-md flex-col items-center px-6 pt-12 pb-10 text-center">
         <div className="app-icon-shadow relative h-28 w-28 overflow-hidden rounded-[1.8rem]">
           <img
-            src={appIcon}
+            src={appIconAsset.url}
             alt="Naqi AI app icon"
             width={112}
             height={112}
