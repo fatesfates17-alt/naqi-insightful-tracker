@@ -57,16 +57,22 @@ const instagramSteps = [
     number: "1",
     title: "Tap the ••• menu",
     body: "Top-right corner of the Instagram browser.",
+    image: step1MenuAsset.url,
+    alt: "Screenshot highlighting the three-dot menu in the top-right corner of a mobile browser",
   },
   {
     number: "2",
     title: "Tap “Open in external browser”",
     body: "This opens the page in Safari or Chrome.",
+    image: step2OpenBrowserAsset.url,
+    alt: "Screenshot highlighting the Open in external browser option",
   },
   {
     number: "3",
     title: "Tap the App Store button",
     body: "Tap Open Naqi in the App Store again.",
+    image: step3ButtonAsset.url,
+    alt: "Screenshot showing the Naqi AI page with the App Store button highlighted",
   },
 ];
 
@@ -107,8 +113,8 @@ function Index() {
           Button not working? In-app browsers block App Store links. Follow the steps for your app:
         </p>
 
-        <div className="mt-4 grid grid-cols-2 gap-3">
-          <div className="surface-card p-3">
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          <div className="surface-card p-2">
             <h2 className="text-center text-sm font-bold text-foreground">TikTok</h2>
             <div className="mt-3 space-y-3">
               {tiktokSteps.map((step) => (
@@ -139,7 +145,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="surface-card p-3">
+          <div className="surface-card p-2">
             <h2 className="text-center text-sm font-bold text-foreground">Instagram</h2>
             <div className="mt-3 space-y-3">
               {instagramSteps.map((step) => (
@@ -154,6 +160,16 @@ function Index() {
                         {step.body}
                       </p>
                     </div>
+                  </div>
+                  <div className="mt-2 overflow-hidden rounded-lg border border-border">
+                    <img
+                      src={step.image}
+                      alt={step.alt}
+                      width={1024}
+                      height={1024}
+                      loading="lazy"
+                      className="block w-full"
+                    />
                   </div>
                 </article>
               ))}
