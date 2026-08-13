@@ -57,16 +57,22 @@ const instagramSteps = [
     number: "1",
     title: "Tap the ••• menu",
     body: "Top-right corner of the Instagram browser.",
+    image: step1MenuAsset.url,
+    alt: "Screenshot highlighting the three-dot menu in the top-right corner of a mobile browser",
   },
   {
     number: "2",
     title: "Tap “Open in external browser”",
     body: "This opens the page in Safari or Chrome.",
+    image: step2OpenBrowserAsset.url,
+    alt: "Screenshot highlighting the Open in external browser option",
   },
   {
     number: "3",
     title: "Tap the App Store button",
     body: "Tap Open Naqi in the App Store again.",
+    image: step3ButtonAsset.url,
+    alt: "Screenshot showing the Naqi AI page with the App Store button highlighted",
   },
 ];
 
