@@ -113,8 +113,8 @@ function Index() {
           Button not working? In-app browsers block App Store links. Follow the steps for your app:
         </p>
 
-        <div className="mt-4 grid grid-cols-2 gap-3">
-          <div className="surface-card p-3">
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          <div className="surface-card p-2">
             <h2 className="text-center text-sm font-bold text-foreground">TikTok</h2>
             <div className="mt-3 space-y-3">
               {tiktokSteps.map((step) => (
