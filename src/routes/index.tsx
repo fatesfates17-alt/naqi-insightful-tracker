@@ -145,7 +145,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="surface-card p-3">
+          <div className="surface-card p-2">
             <h2 className="text-center text-sm font-bold text-foreground">Instagram</h2>
             <div className="mt-3 space-y-3">
               {instagramSteps.map((step) => (
