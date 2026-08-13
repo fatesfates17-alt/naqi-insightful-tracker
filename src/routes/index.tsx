@@ -161,6 +161,16 @@ function Index() {
                       </p>
                     </div>
                   </div>
+                  <div className="mt-2 overflow-hidden rounded-lg border border-border">
+                    <img
+                      src={step.image}
+                      alt={step.alt}
+                      width={1024}
+                      height={1024}
+                      loading="lazy"
+                      className="block w-full"
+                    />
+                  </div>
                 </article>
               ))}
             </div>
