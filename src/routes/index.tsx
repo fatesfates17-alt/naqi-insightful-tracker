@@ -103,41 +103,61 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-md px-6 pb-16">
-        <div className="surface-card p-6">
-          <div className="flex items-center gap-3">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
-              ?
-            </span>
-            <h2 className="text-lg font-bold text-foreground">Button not working?</h2>
-          </div>
-          <p className="mt-2 text-sm text-muted-foreground">
-            TikTok and some in-app browsers block App Store redirects. Follow these 3 steps:
-          </p>
+        <p className="text-center text-sm text-muted-foreground">
+          Button not working? In-app browsers block App Store links. Follow the steps for your app:
+        </p>
 
-          <div className="mt-6 space-y-5">
-            {steps.map((step) => (
-              <article key={step.number} className="rounded-2xl border border-border bg-card p-4">
-                <div className="flex items-start gap-3">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-base font-black text-primary-foreground">
-                    {step.number}
-                  </span>
-                  <div className="text-left">
-                    <h3 className="text-base font-bold text-foreground">{step.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          <div className="surface-card p-3">
+            <h2 className="text-center text-sm font-bold text-foreground">TikTok</h2>
+            <div className="mt-3 space-y-3">
+              {tiktokSteps.map((step) => (
+                <article key={step.number} className="rounded-xl border border-border bg-card p-2">
+                  <div className="flex items-start gap-2">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[11px] font-black text-primary-foreground">
+                      {step.number}
+                    </span>
+                    <div className="text-left">
+                      <h3 className="text-xs font-bold text-foreground">{step.title}</h3>
+                      <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground">
+                        {step.body}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="mt-4 overflow-hidden rounded-xl border border-border">
-                  <img
-                    src={step.image}
-                    alt={step.alt}
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="block w-full"
-                  />
-                </div>
-              </article>
-            ))}
+                  <div className="mt-2 overflow-hidden rounded-lg border border-border">
+                    <img
+                      src={step.image}
+                      alt={step.alt}
+                      width={1024}
+                      height={1024}
+                      loading="lazy"
+                      className="block w-full"
+                    />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="surface-card p-3">
+            <h2 className="text-center text-sm font-bold text-foreground">Instagram</h2>
+            <div className="mt-3 space-y-3">
+              {instagramSteps.map((step) => (
+                <article key={step.number} className="rounded-xl border border-border bg-card p-2">
+                  <div className="flex items-start gap-2">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[11px] font-black text-primary-foreground">
+                      {step.number}
+                    </span>
+                    <div className="text-left">
+                      <h3 className="text-xs font-bold text-foreground">{step.title}</h3>
+                      <p className="mt-0.5 text-[11px] leading-snug text-muted-foreground">
+                        {step.body}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
