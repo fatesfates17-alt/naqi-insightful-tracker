@@ -28,27 +28,45 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const steps = [
+const tiktokSteps = [
   {
     number: "1",
     title: "Tap the ••• menu",
-    body: "Look for the three dots in the top-right corner of your browser and tap them.",
+    body: "Top-right corner of the TikTok browser.",
     image: step1MenuAsset.url,
     alt: "Screenshot highlighting the three-dot menu in the top-right corner of a mobile browser",
   },
   {
     number: "2",
     title: "Tap “Open in Browser”",
-    body: "Choose “Open in Safari” or “Open in Browser” from the menu that appears.",
+    body: "Choose “Open in Safari” or “Open in Browser”.",
     image: step2OpenBrowserAsset.url,
     alt: "Screenshot highlighting the Open in Browser option in the mobile menu",
   },
   {
     number: "3",
     title: "Tap the App Store button",
-    body: "Once the page opens in your browser, tap Open Naqi in the App Store again.",
+    body: "Tap Open Naqi in the App Store again.",
     image: step3ButtonAsset.url,
     alt: "Screenshot showing the Naqi AI landing page with the App Store button highlighted",
+  },
+];
+
+const instagramSteps = [
+  {
+    number: "1",
+    title: "Tap the ••• menu",
+    body: "Top-right corner of the Instagram browser.",
+  },
+  {
+    number: "2",
+    title: "Tap “Open in external browser”",
+    body: "This opens the page in Safari or Chrome.",
+  },
+  {
+    number: "3",
+    title: "Tap the App Store button",
+    body: "Tap Open Naqi in the App Store again.",
   },
 ];
 
