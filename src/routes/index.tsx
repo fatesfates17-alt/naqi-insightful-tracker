@@ -109,7 +109,7 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-md px-6 pb-16">
-        <p className="text-center text-sm text-muted-foreground">
+        <p className="text-center text-lg font-semibold text-foreground">
           Button not working? In-app browsers block App Store links. Follow the steps for your app:
         </p>
 
