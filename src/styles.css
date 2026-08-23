@@ -42,7 +42,7 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-primary-glow: var(--primary-glow);
   --color-ink: var(--ink);
-  --font-display: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
