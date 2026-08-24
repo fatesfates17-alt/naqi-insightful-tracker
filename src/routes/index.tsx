@@ -274,13 +274,13 @@ function Index() {
 
             <div className="relative mx-auto flex w-full max-w-md items-end justify-center gap-3 sm:gap-5">
               <Phone
-                src={shot1Asset.url}
+                src="/hero-left.png"
                 alt="Naqi AI scanning a product barcode"
                 className="w-1/2 translate-y-4"
               />
               <Phone
-                src={shot2Asset.url}
-                alt="Naqi AI daily calorie and macro tracking screen"
+                src="/hero-right.png"
+                alt="Naqi AI Halal Verified product result screen"
                 className="w-1/2"
               />
             </div>
