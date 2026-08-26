@@ -10,13 +10,13 @@ import {
   Star,
   ChevronDown,
 } from "lucide-react";
-import appIconAsset from "@/assets/app-icon.png.asset.json";
-import shot1Asset from "@/assets/shot1.png.asset.json";
-import shot2Asset from "@/assets/shot2.png.asset.json";
-import shot3Asset from "@/assets/shot3.png.asset.json";
-import step1MenuAsset from "@/assets/step1-menu.png.asset.json";
-import step2OpenBrowserAsset from "@/assets/step2-open-browser.png.asset.json";
-import step3ButtonAsset from "@/assets/step3-button.png.asset.json";
+const appIconUrl = "/app-icon.png";
+const shot1Url = "/shot1.png";
+const shot2Url = "/shot2.png";
+const shot3Url = "/shot3.png";
+const step1MenuUrl = "/step1-menu.png";
+const step2OpenBrowserUrl = "/step2-open-browser.png";
+const step3ButtonUrl = "/step3-button.png";
 
 const title = "Naqi AI — Know What's Halal. For Sure.";
 const description =
