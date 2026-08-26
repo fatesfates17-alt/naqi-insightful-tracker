@@ -10,13 +10,13 @@ import {
   Star,
   ChevronDown,
 } from "lucide-react";
-import appIconAsset from "@/assets/app-icon.png.asset.json";
-import shot1Asset from "@/assets/shot1.png.asset.json";
-import shot2Asset from "@/assets/shot2.png.asset.json";
-import shot3Asset from "@/assets/shot3.png.asset.json";
-import step1MenuAsset from "@/assets/step1-menu.png.asset.json";
-import step2OpenBrowserAsset from "@/assets/step2-open-browser.png.asset.json";
-import step3ButtonAsset from "@/assets/step3-button.png.asset.json";
+const appIconUrl = "/app-icon.png";
+const shot1Url = "/shot1.png";
+const shot2Url = "/shot2.png";
+const shot3Url = "/shot3.png";
+const step1MenuUrl = "/step1-menu.png";
+const step2OpenBrowserUrl = "/step2-open-browser.png";
+const step3ButtonUrl = "/step3-button.png";
 
 const title = "Naqi AI — Know What's Halal. For Sure.";
 const description =
@@ -79,19 +79,19 @@ const steps = [
     number: "01",
     title: "Scan any barcode",
     body: "Point your camera at the product. Naqi reads the barcode in a second.",
-    image: shot1Asset.url,
+    image: shot1Url,
   },
   {
     number: "02",
     title: "Track calories with ease",
     body: "Every scan logs calories, protein, carbs and fats to your daily goal.",
-    image: shot2Asset.url,
+    image: shot2Url,
   },
   {
     number: "03",
     title: "See insights, stay on track",
     body: "Weekly summaries show exactly how your habits are trending.",
-    image: shot3Asset.url,
+    image: shot3Url,
   },
 ];
 
@@ -137,21 +137,21 @@ const fallbackSteps = [
     number: "1",
     title: "Tap the ••• menu",
     body: "Top-right corner of the in-app browser.",
-    image: step1MenuAsset.url,
+    image: step1MenuUrl,
     alt: "Screenshot highlighting the three-dot menu in a mobile in-app browser",
   },
   {
     number: "2",
     title: "Tap “Open in Browser”",
     body: "Choose Safari, Chrome or “Open in external browser”.",
-    image: step2OpenBrowserAsset.url,
+    image: step2OpenBrowserUrl,
     alt: "Screenshot highlighting the Open in Browser option",
   },
   {
     number: "3",
     title: "Tap the App Store button",
     body: "Tap “Download on the App Store” again.",
-    image: step3ButtonAsset.url,
+    image: step3ButtonUrl,
     alt: "Screenshot showing the App Store button highlighted",
   },
 ];
@@ -417,7 +417,7 @@ function Index() {
         <section className="mx-auto max-w-6xl px-6 pb-20">
           <div className="surface-card flex flex-col items-center px-6 py-12 text-center">
             <img
-              src={appIconAsset.url}
+              src={appIconUrl}
               alt="Naqi AI app icon"
               width={88}
               height={88}
