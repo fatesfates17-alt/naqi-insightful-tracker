@@ -32,16 +32,18 @@ async def check_fallback_button() -> None:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page(viewport={"width": 390, "height": 844})
 
-        # Simulate an in-app browser blocking the App Store navigation.
-        await page.route("**/apps.apple.com/**", lambda route: route.abort())
+        # Simulate an in-app browser blocking the automatic App Store redirect:
+        # stub out location.replace/reload so the page stays put.
+        await page.add_init_script(
+            "window.location.replace = () => {};"
+        )
 
         # Browser document navigations may receive the SSR fallback page (200)
         # instead of the bare 302; either is fine — what matters is that the
         # fallback renders when the App Store navigation is blocked.
         await page.goto(f"{BASE_URL}/download", wait_until="domcontentloaded")
 
-        # Give window.location.replace a chance to fire (and be aborted).
-        await page.wait_for_timeout(1500)
+        await page.wait_for_timeout(1000)
         assert page.url.startswith(BASE_URL), f"page unexpectedly navigated away to {page.url}"
 
         button = page.get_by_role("link", name="Download Naqi AI")
